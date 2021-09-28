@@ -1,0 +1,1 @@
+console.log('It is for the client side');
