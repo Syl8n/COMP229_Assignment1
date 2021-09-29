@@ -11,11 +11,12 @@
   <link rel='stylesheet' href='/css/style.css' />
 </head>
 <body>
+    <div id="allPage">
   <!-- Main navbar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="logo" style="width:100px;">
+      <img src="img/logo.png" alt="logo" style="width:130px; margin-left: 20px;">
     </a>
     
     <!-- Links -->
@@ -37,19 +38,28 @@
         href="/projects"><i class="fas fa-tasks"></i> Projects</a>
       </li>
       <li class="nav-item">
+        <% if(title == 'Services') { %>
+            <a class="nav-link active"
+        <%} else { %>
+            <a class="nav-link"
+        <% } %>
+        href="/services"><i class="fas fa-suitcase"></i> Services</a>
+      </li>
+      <li class="nav-item">
         <% if(title == 'About') { %>
             <a class="nav-link active"
         <%} else { %>
             <a class="nav-link"
         <% } %>
-        href="/about"><i class="fas fa-address-card"></i> About</a>
+        href="/about"><i class="fas fa-address-card"></i> About Me</a>
       <li class="nav-item">
-        <% if(title == 'Users') { %>
+        <% if(title == 'Contact') { %>
             <a class="nav-link active"
         <%} else { %>
             <a class="nav-link"
         <% } %>
-        href="/users"><i class="fas fa-user"></i> Users</a>
+        href="/contact"><i class="fas fa-envelope"></i> Contact Me</a>
       </li>
     </ul>
   </nav>
+  <div id="Content">

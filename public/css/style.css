@@ -1,8 +1,122 @@
+/*
+  style.css
+  Henry Suh
+  301004212
+  Sep 28th, 2021
+*/
+
 body {
+  width:100%;
+  height:100%;
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #1f1f1f;
+  color:snow;
 }
 
-a {
-  color: #00B7FF;
+.links{
+  color:rgb(209, 182, 157);
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+.links:hover{
+  color:snow;
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+.links:visited{
+  color:rgb(209, 182, 157);
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+#allPage{
+  padding: 0px;
+  width: 980px;
+  height:100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Content{
+  margin: 30px 0px 20px 0px;
+}
+
+.sectionHeader{
+  width:100%;
+  text-align: right;
+  margin: 0px 0px 30px 0px;
+  background-color:tan;
+  border-radius: 2em;
+  padding-right: 20px;
+  color: rgb(107, 81, 46);
+  -webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: rgb(107, 81, 46);
+}
+
+#missionState{
+  width:100%;
+  text-align: center;
+  margin: -10px 0px 50px 0px;
+  background-color:rgb(114, 191, 196);
+  padding: 30px 0px 30px 0px;
+  -webkit-text-stroke-width: 0.1px;
+	-webkit-text-stroke-color: white;
+}
+
+#welcome, .lDiv{
+  display: inline-block;
+  width:49%;
+  text-align: right;
+  padding-right: 50px;
+  margin: 0;
+  vertical-align: top;
+}
+
+#welcome p{
+  font-size:1.1em;
+  font-weight: bold;
+}
+
+#welcomeDisc, .rDiv{
+  display: inline-block;
+  max-width:49%;
+  padding-left: 50px;
+  margin: 0;
+  vertical-align: top;
+}
+
+#welcomeDisc p{
+  font-size:1.1em;
+  font-weight: bold;
+}
+
+.vl {
+  border-left: 3px solid rgb(209, 182, 157);
+  display: inline-block;
+  margin: 0;
+  font-size: 0;
+  top: 0;
+}
+
+#provides{
+  width:100%;
+  text-align: center;
+  margin: -10px 0px 50px 0px;
+}
+
+.divBlock{
+  height:250px;
+  margin-bottom: 70px;
+}
+
+.divBlockEnd{
+  height:250px;
+}
+
+.divBlock h4, .divBlockEnd h4{
+  color:tan;
 }
