@@ -120,3 +120,12 @@ body {
 .divBlock h4, .divBlockEnd h4{
   color:tan;
 }
+
+#idvPDF{
+  text-align: right;
+  font-size: 0.8em;
+}
+
+footer{
+  font-size:0.5em;
+}

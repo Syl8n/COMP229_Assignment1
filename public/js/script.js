@@ -5,4 +5,10 @@
   Sep 28th, 2021
 */
 
-console.log('It is for the client side');
+function myGlobals(){
+  var gbName = "";
+  var gbMsg = "";
+}
+
+module.exports = myGlobals;
+
