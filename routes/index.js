@@ -41,16 +41,10 @@ router.get('/resume', function(req, res, next) {
 });
 
 /* Send Message */
-router.get('/sendMsg', function(req, res, next) {
-  var myGb = require('/js/script.js');
-  // myGb.gbName = req.query.name;
-  // myGb.gbMsg = req.query.msg;
-  // res.write("<script>alert('Your message has been sent! Please check the console log')</script>");
-  // res.write("<script>window.location=\"/contact\"</script>");
-  // console.log('name: ' + myGb.gbName);
-  // console.log('message: ' + myGb.gbMsg);
-  // res.send(`name : ${gbName}, msg : ${gbMsg}`);
-  // res.render('contact', { title: 'Contact' });
+router.post('/sendMsg', function(req, res, next) {
+  var msg = req.body;
+  res.render('contact', { title: 'Contact' });
+  console.log(msg);
 });
 
 module.exports = router;
