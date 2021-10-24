@@ -16,7 +16,7 @@
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="logo" style="width:130px; margin-left: 20px;">
+      <img src="/img/logo.png" alt="logo" style="width:130px; margin-left: 20px;">
     </a>
     
     <!-- Links -->
@@ -52,6 +52,7 @@
             <a class="nav-link"
         <% } %>
         href="/about"><i class="fas fa-address-card"></i> About Me</a>
+      </li>
       <li class="nav-item">
         <% if(title == 'Contact') { %>
             <a class="nav-link active"
@@ -59,6 +60,21 @@
             <a class="nav-link"
         <% } %>
         href="/contact"><i class="fas fa-envelope"></i> Contact Me</a>
+      </li>
+      <li class="nav-item">
+        <% if(title == 'Business Contact') { %>
+            <a class="nav-link active"
+        <%} else { %>
+            <a class="nav-link"
+        <% } %>
+        href="/businessContact"><i class="fas fa-tasks"></i> Business Contact</a>
+      </li>
+      <li class="nav-item">
+        <% if (typeof userName == 'string' && userName) { %>
+          <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>)</a>
+        <%} else { %>
+          <a class="nav-link" href="/users/signin"><i class="fas fa-lock"></i>Sign in</a>
+        <% } %>
       </li>
     </ul>
   </nav>

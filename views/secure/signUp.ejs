@@ -1,0 +1,67 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content -->
+<!-- Section Header -->
+<div class="sectionHeader">
+    <h1><%= title %></h1>
+</div>
+
+<div class="row">
+    <div class="offset-md-3 col-md-3">
+        <% for(var i in messages) { %>
+            <div class="flash"><%= messages[i] %><br/></div>
+        <% } %>
+        <!-- sine up form -->
+        <form class="form" action="/users/signup" method="POST">
+            <div class="form-group">
+                <!-- use email as username -->
+                <lable for="username">Email:</lable>
+                <input type="text" class="form-control"
+                    id="username"
+                    name="username"
+                    size="15"
+                    value="<%= user.username %>"
+                    required>
+            </div>
+            <br/>
+            <div class="form-group">
+                <lable for="nickname">Nickname:</lable>
+                <input type="text" class="form-control"
+                    id="nickname"
+                    name="nickname"
+                    size="15"
+                    value="<%= user.nickname %>"
+                    required>
+            </div>
+            <br/>
+            <div class="form-group">
+                <lable for="password">Password:</lable>
+                <input type="password" class="form-control"
+                    id="password"
+                    name="password"
+                    size="15"
+                    value="<%= user.password %>"
+                    required>
+            </div>
+            <br/>
+            <div class="form-group">
+                <lable for="password_confirm">Confirm Password:</lable>
+                <input type="password" class="form-control"
+                    id="password_confirm"
+                    name="password_confirm"
+                    size="15"
+                    required>
+            </div>
+            <br/>
+            <button class="btn btn-primary" type="submit">
+                Sign Up
+            </button>
+            &nbsp;
+            <a href="/users/signin" class="btn btn-warning">
+                <i class="fas fa-undo"></i>Cancel
+            </a>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>

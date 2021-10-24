@@ -1,0 +1,50 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content -->
+<!-- Section Header -->
+<div class="sectionHeader">
+    <h1><%= title %></h1>
+</div>
+
+<div class="row">
+    <div class="offset-md-3 col-md-3">
+        <!-- error messages -->
+    <% for(var i in messages) { %>
+        <div class="flash"><%= messages[i] %><br/></div>
+    <% } %>
+        <!-- sign in form -->
+        <form class="form" method="POST">
+            <div class="form-group">
+                <!-- use email as username -->
+                <lable for="username">Email:</lable>
+                <input type="text" class="form-control"
+                    id="username"
+                    name="username"
+                    size="15"
+                    placeholder="Enter your email"
+                    required>
+            </div>
+            <br/>
+            <div class="form-group">
+                <lable for="password">Password:</lable>
+                <input type="password" class="form-control"
+                    id="password"
+                    name="password"
+                    size="15"
+                    placeholder="********"
+                    required>
+            </div>
+            <br/>
+            <button class="btn btn-primary" type="submit">
+                Sign In
+            </button>
+            <br/><br/><br/>
+            <p>You don't have an account?</p>
+            <a href="/users/signup" class="btn btn-warning">
+                Sign Up
+            </a>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer.ejs %>
