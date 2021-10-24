@@ -58,7 +58,6 @@ module.exports.renderSignup = function(req, res, next) {
 // saving info to db and perform proper actions
 module.exports.signup = function(req, res, next) {
   if (!req.user && req.body.password === req.body.password_confirm) {
-    console.log(req.body);
 
     let user = new User(req.body);
     user.provider = 'local';
@@ -94,7 +93,6 @@ module.exports.signout = function(req, res, next) {
 
 // for signing in
 module.exports.signin = function(req, res, next){
-    console.log(req.body);
   passport.authenticate('local', {   
     successRedirect: req.session.url || '/businessContact',
     failureRedirect: '/users/signin',
