@@ -6,31 +6,31 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('home', { title: 'Home',
-  userName: req.user ? req.user.username : '' });
+  userName: req.user ? req.user.nickname : '' });
 });
 
 /* GET Projects page. */
 router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects',
-  userName: req.user ? req.user.username : '' });
+  userName: req.user ? req.user.nickname : '' });
 });
 
 /* GET About page. */
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About',
-  userName: req.user ? req.user.username : '' });
+  userName: req.user ? req.user.nickname : '' });
 });
 
 /* GET Services page. */
 router.get('/services', function(req, res, next) {
   res.render('services', { title: 'Services',
-  userName: req.user ? req.user.username : '' });
+  userName: req.user ? req.user.nickname : '' });
 });
 
 /* GET Contact page. */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact',
-  userName: req.user ? req.user.username : '' });
+  userName: req.user ? req.user.nickname : '' });
 });
 
 /* GET Contact page. */

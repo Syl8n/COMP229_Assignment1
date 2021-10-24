@@ -13,7 +13,7 @@ module.exports.contactList = function(req, res, next) {
             res.render('businessContact/list', {
                 title: 'Business Contact', 
                 ContactList: contactList,
-                userName: req.user ? req.user.username : ''
+                userName: req.user ? req.user.nickname : ''
             })            
         }
     });
@@ -36,7 +36,7 @@ module.exports.displayEditPage = (req, res, next) => {
             res.render('businessContact/add_edit', {
                 title: 'Edit Contact', 
                 item: itemToEdit,
-                userName: req.user ? req.user.username : ''
+                userName: req.user ? req.user.nickname : ''
             })
         }
     });
@@ -99,7 +99,7 @@ module.exports.displayAddPage = (req, res, next) => {
     res.render('businessContact/add_edit', {
         title: 'Add a new Item',
         item: newItem,
-        userName: req.user ? req.user.username : ''
+        userName: req.user ? req.user.nickname : ''
     })          
 
 }

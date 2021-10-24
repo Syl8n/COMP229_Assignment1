@@ -7,7 +7,7 @@ let passport = require('../config/passport');
 router.get('/', function(req, res, next) {  
   res.render('users', { 
     title: 'Users',
-    userName: req.user ? req.user.username : ''
+    userName: req.user ? req.user.nickname : ''
   });
 });
 

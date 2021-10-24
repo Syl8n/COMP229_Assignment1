@@ -9,20 +9,21 @@
 console.log('Goes to the client side.');
 
 // Warning msg for deleting an item
-if(getTitle == "Business Contact")
-{
-    let deleteButtons = document.querySelectorAll('.btn-danger');
+// if(getTitle == "Business Contact")
+// {
+//   console.log('hey');
+//     let deleteButtons = document.querySelectorAll('.btn btn-danger btn-sm');
         
-    for(button of deleteButtons)
-    {
-        button.addEventListener('click', (event)=>{
-            if(!confirm("Do you really want this?")) 
-            {
-                event.preventDefault();
-            }
-        });
-    }
-}
+//     for(button of deleteButtons)
+//     {
+//         button.addEventListener('click', (event)=>{
+//             if(!confirm("Do you really want this?")) 
+//             {
+//                 event.preventDefault();
+//             }
+//         });
+//     }
+// }
 
 // confirm password validation
 if(getTitle == "Sign-up Form")
