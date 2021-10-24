@@ -96,7 +96,7 @@ module.exports.signout = function(req, res, next) {
 module.exports.signin = function(req, res, next){
     console.log(req.body);
   passport.authenticate('local', {   
-    successRedirect: req.session.url || '/',
+    successRedirect: req.session.url || '/businessContact',
     failureRedirect: '/users/signin',
     failureFlash: true
   })(req, res, next);
